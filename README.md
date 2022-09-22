@@ -6,6 +6,7 @@
 
 ## General Info
 * The name is Quan Tran. I like video game. I joined this project because ... idk
+* I don't know what my name is. JK. It's Kenneth ^^. I don't have much hobbies other than sarcasm and chess. I thought I knew why I join this program but the more I'm in it, the more I doubt myself @@.
 
 	
 ## Technologies
