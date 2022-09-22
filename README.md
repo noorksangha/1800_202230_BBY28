@@ -5,7 +5,8 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+* The name is Quan Tran. I like video game. I joined this project because ... idk
+
 	
 ## Technologies
 Technologies used for this project:
