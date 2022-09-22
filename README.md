@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+*Hi my name is Noor. I'm excited about this project beacuse it will be a new lesson.
 	
 ## Technologies
 Technologies used for this project:
