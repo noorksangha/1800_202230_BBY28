@@ -5,8 +5,13 @@
 * [Contents](#content)
 
 ## General Info
+<<<<<<< HEAD
 This browser based web application to ...
 *Hi my name is Noor. I'm excited about this project beacuse it will be a new lesson.
+=======
+* The name is Quan Tran. I like video game. I joined this project because ... idk
+
+>>>>>>> c89a48c2f7ba23de0fb5c2b13cfafb0324598607
 	
 ## Technologies
 Technologies used for this project:
