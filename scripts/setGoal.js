@@ -2,8 +2,8 @@ function writeGoal() {
     console.log("in")
     let GoalName = document.getElementById("validationName").value;
     let Deadline = document.getElementById("validationDeadline").value;
-    let Amount = document.getElementId("validationAmount").value;
-    let Notes = document.getElementId("validationDefault03").value;
+    let Amount = document.getElementById("validationAmount").value;
+    let Notes = document.getElementById("validationDefault03").value;
     console.log(GoalName, Deadline, Amount, Notes);
 
 
