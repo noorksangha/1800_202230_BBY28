@@ -26,7 +26,6 @@ function writeGoal() {
                     }).then(() => {
                         window.location.href = "thanks.html";
                     })
-
                 })
         } else {
             //No user is signed in.
