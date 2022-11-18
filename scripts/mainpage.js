@@ -8,10 +8,10 @@ function insertName() {
             user_Name = user.displayName;
             var docref = db.collection("users").doc(user.uid);
             var yourIncome = null;
-            docref.get().then(function(doc){
+            docref.get().then(function (doc) {
                 console.log(doc.data().income);
                 yourIncome = doc.data().income;
-                $("#incomeMain").text("Monthly Budget: $" + yourIncome );
+                $("#incomeMain").text("Monthly Budget: $" + yourIncome);
             });
 
             //method #1:  insert with html only
@@ -25,40 +25,27 @@ function insertName() {
         }
     });
 }
+
 function getBookmarks(user) {
-    db.collection("Goals").get().then(allGoals => {
-        let CardTemplate = document.getElementById("CardTemplate");
-        allGoals.forEach(allGoals => {
+    let CardTemplate = document.getElementById("CardTemplate");
+    db.collection("Goals").where("userID", "==", user).get().then((allGoals) => {
+        allGoals.forEach((doc) => {
             console.log(user);
-            db.collection("Goals").where("userID", "==", user).get().then(snap => {
-                size = snap.size;
-                queryData = snap.docs;
-                if (size == 1) {
-                    var doc = queryData[0].data();
-                    var name = doc.validationName; //gets the name field
-                    var amount = doc.validationAmount; //gets the unique ID field
-                    var deadline = doc.validationDeadline; //gets the length field
-                    let newCard = CardTemplate.content.cloneNode(true);
-                    newCard.querySelector('.card-name').innerHTML = name;
-                    newCard.querySelector('.card-deadline').innerHTML = deadline;
-                    newCard.querySelector('.card-amount').innerHTML = amount;
-                    hikeCardGroup.appendChild(newCard);
-                } else {
-                    console.log("Query has more than one data")
-                }
-            })
+            var name = doc.data().validationName; //gets the name field
+            var amount = doc.data().validationAmount; //gets the amount field
+            var deadline = doc.data().validationDeadline; //gets the deadline field
+            let newCard = CardTemplate.content.cloneNode(true);
+            newCard.querySelector('.card-name').innerHTML = name;
+            newCard.querySelector('.card-deadline').innerHTML = deadline;
+            newCard.querySelector('.card-amount').innerHTML = amount;
+            document.getElementById('hikeCardGroup').appendChild(newCard);
         });
-     }
-);
-        
-    
-    
+});
 }
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         console.log(user.uid);
         insertName();
-        getBookmarks(user.uid);
         getBookmarks(user.uid);
     } else {
         window.location.href = "thanks.html";
