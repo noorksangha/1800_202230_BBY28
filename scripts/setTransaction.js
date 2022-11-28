@@ -20,7 +20,7 @@ function writeTransaction() {
                         userID: userID,
                         TName: TName,
                         budget: budget,
-                        Cost: cost,
+                        Cost: Cost,
                         Notes: notes,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
