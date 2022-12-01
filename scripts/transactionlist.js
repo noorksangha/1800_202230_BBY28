@@ -1,26 +1,37 @@
-function getTransactions(user) {
-    let TTemplate = document.getElementById("TTemplate");
-    db.collection("Transactions").where("userID", "==", user).get().then((allTransactions) => {
-        allTranasactions.forEach((doc) => {
-            console.log(user);
-            var transaction = doc.data().TName; //gets the name field
-            var tdeadline = doc.data().deadline; //gets the amount field
-            var tamount = doc.data().cost; //gets the deadline field
-            let newCard = CardTemplate.content.cloneNode(true);
-            newCard.querySelector('.card-TName').innerHTML = transaction;
-            newCard.querySelector('.card-Tdeadline').innerHTML = tdeadline;
-            newCard.querySelector('.card-Tcost').innerHTML = tamount;
-            document.getElementById('TCardGroup').appendChild(newCard);
-        });
-});
-}
+function tpopulate() {
+    console.log("in")
+    let translisttemplate = document.getElementById("translist-template");
+    let translistgroup = document.getElementById("trans-table");
 
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        console.log(user.uid);
-        getTransactions(user.uid);
-    } else {
-        window.location.href = "thanks.html";
-        console.log("No user is signed in");
-    }
-});
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            var userID2 = user.uid;
+            var docref = db.collection("Transactions");
+            let numberid = 0;
+            docref.get().then(allTrans => {
+                allTrans.forEach(doc => {
+                    
+                    if (doc.data().userID == userID2){
+                        numberid++;         
+                        var tName = doc.data().TName;
+                        var spending = doc.data().cost;
+                        var tdeadline = doc.data().deadline;
+                        let translist = translisttemplate.content.cloneNode(true);
+                        console.log(spending);
+                        translist.querySelector('.trans-row').innerHTML = numberid;
+                        translist.querySelector('.Name').innerHTML = tName;
+                        translist.querySelector('.trans-cost').innerHTML = spending;
+                        translist.querySelector('.trans-date').innerHTML = tdeadline;
+                        translistgroup.appendChild(translist);
+                    }
+                });
+            });
+
+        }
+        else {
+            // No user is signed in.
+        }
+    });
+
+}
+tpopulate();
