@@ -36,52 +36,49 @@
     <!-- Your HTML Layout go here -->
     <nav id="navbarPlaceholder"></nav>
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-        <form>
-            <div class="jumbotron">
-                <h1 class="display-2">Setting up a Financial Goal</h1>
-                <p class="lead">- Let's begin a new journey! -</p>
-                <hr class="my-4">
-                <div class="col-md-4 mb-3">
-                    <label for="validationDefault01">Name of the goal:</label>
-                    <input type="text" class="form-control" id="validationName" placeholder="Name" value="Pay ..."
-                        required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationDefault02">Deadline</label>
-                    <input type="text" class="form-control" id="validationDeadline" placeholder="Deadline"
-                        value="dd/mm/yyyy" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationAmount">Amount:</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend2">$</span>
-                        </div>
-                        <input type="number" class="form-control" id="validationAmount" placeholder="Amount"
-                            aria-describedby="inputGroupPrepend2" required>
+        <div class="jumbotron">
+            <h1 class="display-2">Setting up a Financial Goal</h1>
+            <p class="lead">- Let's begin a new journey! -</p>
+            <hr class="my-4">
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Name of the goal:</label>
+                <input type="text" class="form-control" id="validationName" placeholder="Name" value="Pay ..." required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationDefault02">Deadline</label>
+                <input type="text" class="form-control" id="validationDeadline" placeholder="Deadline"
+                    value="dd/mm/yyyy" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationAmount">Amount:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend2">$</span>
                     </div>
+                    <input type="number" class="form-control" id="validationAmount" placeholder="Amount"
+                        aria-describedby="inputGroupPrepend2" required>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="validationDefault03">Notes:</label>
-                    <input type="text" class="form-control" id="validationDefault03" placeholder="Notes">
-                </div>
-                <hr class="my-4">
-                <button class="btn btn-dark btn-lg" type="submit" onclick="writeGoal()">Let's do this!</button>
-        </form>
-    </div>
-    <div id="footerPlaceholder"></div>
-    <!------------------------------>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationDefault03">Notes:</label>
+                <input type="text" class="form-control" id="validationNotes" placeholder="Notes">
+            </div>
+            <hr class="my-4">
+            <button class="btn btn-dark btn-lg" onclick="writeGoal()">Let's do this!</button>
+        </div>
+        <div id="footerPlaceholder"></div>
+        <!------------------------------>
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+        <!---------------------------------------------->
+        <!-- Your own JavaScript functions go here    -->
+        <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/firebaseAPI_TEAM28.js"></script>
-    <script src="./scripts/setGoal.js"></script>
+        <!-- Link to scripts of your own -->
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/firebaseAPI_TEAM28.js"></script>
+        <script src="./scripts/setGoal.js"></script>
 
-    <script src="./scripts/skeleton.js"></script>
+        <script src="./scripts/skeleton.js"></script>
 
 </body>
 

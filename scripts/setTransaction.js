@@ -2,7 +2,7 @@ function writeTransaction() {
     console.log("in")
     let TNAME = document.getElementById("TName").value;
     let Deadline = document.getElementById("deadline").value;
-    let Cost = document.getElementById("cost").value;
+    let Cost = document.getElementById("Cost").value;
     let Notes = document.getElementById("notes").value;
     console.log(TNAME, Deadline, Cost, Notes);
 
@@ -15,7 +15,7 @@ function writeTransaction() {
             //get the docuement for current user.
             currentUser.get()
                 .then(userDoc => {
-                    var userEmail = userDoc.data().email;
+                    // var userEmail = userDoc.data().email;
                     db.collection("Transactions").add({
                         userID: userID,
                         TName: TNAME,
