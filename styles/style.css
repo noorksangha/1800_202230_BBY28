@@ -1,1 +1,7 @@
-
+body {
+    background: url('https://img.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_53876-156206.jpg?w=2000') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
