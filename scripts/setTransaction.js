@@ -1,10 +1,10 @@
 function writeTransaction() {
     console.log("in")
-    let Costname = document.getElementById("TName").value;
-    let Time = document.getElementById("budget").value;
+    let TNAME = document.getElementById("TName").value;
+    let Deadline = document.getElementById("deadline").value;
     let Cost = document.getElementById("cost").value;
     let Notes = document.getElementById("notes").value;
-    console.log(GoalName, Deadline, Amount, Notes);
+    console.log(TNAME, Deadline, Cost, Notes);
 
 
 
@@ -18,10 +18,10 @@ function writeTransaction() {
                     var userEmail = userDoc.data().email;
                     db.collection("Transactions").add({
                         userID: userID,
-                        TName: TName,
-                        budget: budget,
-                        Cost: Cost,
-                        Notes: notes,
+                        TName: TNAME,
+                        deadline: Deadline,
+                        cost: Cost,
+                        notes: Notes,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
                         window.location.href = "thanks.html";
