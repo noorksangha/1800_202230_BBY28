@@ -23,9 +23,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
-  <!-- Link to styles of your own -->
-  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+   <!-- Link to styles of your own -->
+  <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
@@ -34,45 +33,51 @@
   <!------------------------------>
   <!-- Your HTML Layout go here -->
   <nav id="navbarPlaceholder"></nav>
-  <div class="container-fluid bg-light text-dark p-5">
-    <div class="container bg-light p-5">
-      <h1 class="display-5">Good morning, <span id="name-goes-here"></span>. Let's get started!</h1>
+  <div class="container-fluid text-dark p-5">
+    <div class="container p-5">
+      <h1 class="display-5">Good morning, <span id="name-goes-here"></span>. Let's Get Saving!</h1>
     </div>
   </div>
 
   <div class="list-group">
-    <a href="goalsList.html" class="list-group-item list-group-item-action active" aria-current="true">
-      Daily Goals:
+    <a href="goalsList.html" class="btn btn-dark btn-lg" aria-current="true">
+      Goals:
     </a>
     <div class="container">
-      <div id="hikeCardGroup" class="row-cols-3"></div>
+
+      <div id="goalCard" class="cols-3"></div>
     </div>
     
   </div>
   <template id="CardTemplate">
-    <p class="card-name"></p>
-    <p class="card-amount"></p>
-    <p class="card-deadline"></p>
+    <div class="row">
+      <div class="col-md">
+        <p class="card-name"></p>
+      </div>
+      <div class="col-md">
+        <p class="card-amount"></p>
+      </div>
+      
+      <div class="col-md">
+        <p class="card-deadline"></p>
+      </div>
+      
+    </div>
+    
   </template>
 
-  <br>
-  <br>
-  <br>
-  <br>
+ 
 
   <div class="d-grid gap-2">
-    <button class="btn btn-primary" type="button" id="incomeMain" >Monthly Budget: $#.##</button>
-    <button class="btn btn-primary" type="button">Monthly Budget Used: $#.##</button>
+    <button class="btn btn-dark btn-lg" type="button" id="incomeMain" onclick="window.open('settingUpAccount.html')">Monthly Budget: $#.##</button>
+    <button class="btn btn-dark btn-lg">Monthly Budget Used: $100</button>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
+
 
   <div class="text-center">
-    <img src="./images/dog.jpeg" href="petpage.html" class="rounded" alt="petpage.html">
-    <button class="btn btn-primary" href="petpage.html" type="button">DOG NAME</button>
+    <img src="./images/tdog.png" href="petpage.html" class="rounded" alt="petpage.html" height="350px">
+    <button onclick="window.open('petpage.html')" class="btn btn-dark btn-lg">Woofy</button>
 
   </div>
   <div id="footerPlaceholder"></div>
@@ -83,13 +88,10 @@
   <!---------------------------------------------->
 
   <!-- Link to scripts of your own -->
-  <script src="./scripts/script.js"></script>
 
   <script src="./scripts/skeleton.js"></script>
 
   <script src="./scripts/firebaseAPI_TEAM28.js"></script>
-
-  <script src="./scripts/authentication.js"></script>
 
   <script src="./scripts/mainpage.js"></script>
 

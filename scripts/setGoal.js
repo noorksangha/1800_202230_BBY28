@@ -3,7 +3,7 @@ function writeGoal() {
     let GoalName = document.getElementById("validationName").value;
     let Deadline = document.getElementById("validationDeadline").value;
     let Amount = document.getElementById("validationAmount").value;
-    let Notes = document.getElementById("validationDefault03").value;
+    let Notes = document.getElementById("validationNotes").value;
     console.log(GoalName, Deadline, Amount, Notes);
 
     firebase.auth().onAuthStateChanged(user => {
@@ -16,7 +16,7 @@ function writeGoal() {
                 validationName: GoalName,
                 validationDeadline: Deadline,
                 validationAmount: Amount,
-                validationDefault03: Notes,
+                validationNotes: Notes,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             }).then(() => {
                 window.location.href = "thanks.html";

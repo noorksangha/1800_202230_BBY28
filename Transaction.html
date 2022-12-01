@@ -37,51 +37,48 @@
     <!-- Your HTML Layout go here -->
     <nav id="navbarPlaceholder"></nav>
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-        <form>
-            <div class="jumbotron">
-                <h1 class="display-2">Add a Transaction:</h1>
-                <p class="lead">- Let's stay up to date! -</p>
-                <hr class="my-4">
-                <div class="col-md-4 mb-3">
-                    <label for="TName">Item Name:</label>
-                    <input type="text" class="form-control" id="TName" placeholder="Name" value="Ex: Mcdonalds..."
-                        required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="budget">Date of Transaction:</label>
-                    <input type="text" class="form-control" id="budget" placeholder="Deadline"
-                        value="dd/mm/yyyy" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="cost">Cost:</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="cost1">$</span>
-                        </div>
-                        <input type="number" class="form-control" id="cost" placeholder="Amount"
-                            aria-describedby="inputGroupPrepend2" required>
+        <div class="jumbotron">
+            <h1 class="display-2">Add a Transaction:</h1>
+            <p class="lead">- Let's stay up to date! -</p>
+            <hr class="my-4">
+            <div class="col-md-4 mb-3">
+                <label for="TName">Item Name:</label>
+                <input type="text" class="form-control" id="TName" placeholder="Name" value="Ex: Mcdonalds..." required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="budget">Date of Transaction:</label>
+                <input type="text" class="form-control" id="deadline" placeholder="Deadline" value="dd/mm/yyyy"
+                    required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="cost">Cost:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="cost">$</span>
                     </div>
+                    <input type="number" class="form-control" id="Cost" placeholder="Amount"
+                        aria-describedby="inputGroupPrepend2" required>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="notes">Notes:</label>
-                    <input type="text" class="form-control" id="notes" placeholder="Notes" required>
-                </div>
-                <hr class="my-4">
-                <button class="btn btn-dark btn-lg" type="button" onclick="writeTransaction()">Let's do this!</button>
-        </form>
-    </div>
-    <div id="footerPlaceholder"></div>
-    <!------------------------------>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="notes">Notes:</label>
+                <input type="text" class="form-control" id="notes" placeholder="Notes" required>
+            </div>
+            <hr class="my-4">
+            <button class="btn btn-dark btn-lg" type="button" onclick="writeTransaction()">Let's do this!</button>
+        </div>
+        <div id="footerPlaceholder"></div>
+        <!------------------------------>
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+        <!---------------------------------------------->
+        <!-- Your own JavaScript functions go here    -->
+        <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/setTransaction.js"></script>
-    <script src="./scripts/firebaseAPI_TEAM28.js"></script>
-    <script src="./scripts/skeleton.js"></script>
+        <!-- Link to scripts of your own -->
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/setTransaction.js"></script>
+        <script src="./scripts/firebaseAPI_TEAM28.js"></script>
+        <script src="./scripts/skeleton.js"></script>
 
 </body>
 
