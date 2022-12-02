@@ -1,18 +1,15 @@
 function writeGoal() {
     console.log("in")
-    let GoalName = document.getElementById("validationName").value;
-    let Deadline = document.getElementById("validationDeadline").value;
-    let Amount = document.getElementById("validationAmount").value;
-    let Notes = document.getElementById("validationNotes").value;
-    console.log(GoalName, Deadline, Amount, Notes);
+    let GoalName = document.getElementById("validationName").value; //get GoalName from user's input
+    let Deadline = document.getElementById("validationDeadline").value; //get Deadline from user's input
+    let Amount = document.getElementById("validationAmount").value; //get Amount from user's input
+    let Notes = document.getElementById("validationNotes").value; //get Notes from user's input
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            // var currentUser = db.collection("users").doc(user.uid);
-            var userID = user.uid;
-            console.log(userID);
+            var userID = user.uid; //get the user's id
             db.collection("Goals").add({
-                userID: userID,
+                userID: userID, 
                 validationName: GoalName,
                 validationDeadline: Deadline,
                 validationAmount: Amount,

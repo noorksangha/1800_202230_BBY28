@@ -1,6 +1,6 @@
 function writeTransaction() {
     console.log("in")
-    let TNAME = document.getElementById("TName").value;
+    let TNAME = document.getElementById("TName").value; 
     let Deadline = document.getElementById("deadline").value;
     let Cost = document.getElementById("Cost").value;
     let Notes = document.getElementById("notes").value;
