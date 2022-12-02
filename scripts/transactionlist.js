@@ -17,7 +17,6 @@ function tpopulate() {
                         var spending = doc.data().cost;
                         var tdeadline = doc.data().deadline;
                         let translist = translisttemplate.content.cloneNode(true);
-                        console.log(spending);
                         translist.querySelector('.trans-row').innerHTML = numberid;
                         translist.querySelector('.Name').innerHTML = tName;
                         translist.querySelector('.trans-cost').innerHTML = spending;
