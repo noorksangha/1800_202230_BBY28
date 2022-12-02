@@ -29,7 +29,7 @@ function writeIncome() {
     if (user) {
       console.log(user.uid);
       //var currentUser = db.collection("users").doc(user.uid);
-      //get the docuement for current user.
+      //get the document for current user.
       db.collection("users")
         .doc(user.uid)
         .update({

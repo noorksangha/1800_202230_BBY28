@@ -19,7 +19,6 @@ var uiConfig = {
                     name: user.displayName,                    //"users" collection
                     email: user.email,                         //with authenticated user's ID (user.uid)
                     country: "Canada",                      //optional default profile info      
-                    school: "BCIT"                          //optional default profile info
                 }).then(function () {
                     console.log("New user added to firestore");
                     window.location.assign("settingUpAccount.html");       //re-direct to mainpage.html after signup
