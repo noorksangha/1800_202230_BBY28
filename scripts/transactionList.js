@@ -1,3 +1,4 @@
+// Populate the transactions list page with transaction pulled from Firebase.
 function tpopulate() {
     console.log("in")
     let translisttemplate = document.getElementById("translist-template");
@@ -10,7 +11,8 @@ function tpopulate() {
             let numberid = 0;
             docref.get().then(allTrans => {
                 allTrans.forEach(doc => {
-                    
+                    // Add data into transaction list
+                    // If userID match add the item for that user to the list.
                     if (doc.data().userID == userID2){
                         numberid++;         
                         var tName = doc.data().TName;
