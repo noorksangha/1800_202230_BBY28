@@ -15,7 +15,7 @@ function writeTransaction() {
             //get the docuement for current user.
             currentUser.get()
                 .then(userDoc => {
-                    // var userEmail = userDoc.data().email;
+                    // Add data into database
                     db.collection("Transactions").add({
                         userID: userID,
                         TName: TNAME,
